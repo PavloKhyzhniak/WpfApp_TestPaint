@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="WpfApp_TestPaint.UserControl_Round"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp_TestPaint"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="50" PreviewMouseMove="Corner_MouseMove" MouseLeave="Corner_MouseMove">
+    <Viewbox >
+        <Grid>
+            
+        <Rectangle x:Name="rectangle" Width="50" Height="50" Stroke="AntiqueWhite" StrokeThickness="1" StrokeDashArray="3 2" >
+
+        </Rectangle>
+        <Ellipse x:Name="elipse" Width="50" Height="50" Fill="Aqua" PreviewMouseDown="UserControl_Round_MouseDown"/>
+        <TextBlock x:Name="textblock" FontSize="30" HorizontalAlignment="Center"
+             VerticalAlignment = "Center"
+             TextTrimming = "CharacterEllipsis">
+            10
+        </TextBlock>
+        <Ellipse x:Name="elipseTopLeft" Width="5" Height="5" Fill="Black" Tag="TopLeft" MouseEnter="Corner_MouseEnter" VerticalAlignment="Top" HorizontalAlignment="Left" PreviewMouseDown="Corner_MouseDown">
+        </Ellipse>
+            <Ellipse x:Name="elipseTopRight" Width="5" Height="5" Fill="Black" Tag="TopRight" MouseEnter="Corner_MouseEnter" VerticalAlignment="Top" HorizontalAlignment="Right" PreviewMouseDown="Corner_MouseDown">
+        </Ellipse>
+            <Ellipse x:Name="elipseBottomLeft" Width="5" Height="5" Fill="Black" Tag="BottomLeft" MouseEnter="Corner_MouseEnter" VerticalAlignment="Bottom" HorizontalAlignment="Left" PreviewMouseDown="Corner_MouseDown">
+        </Ellipse>
+            <Ellipse x:Name="elipseBottomRight" Width="5" Height="5" Fill="Black" Tag="BottomRight" MouseEnter="Corner_MouseEnter" VerticalAlignment="Bottom" HorizontalAlignment="Right" PreviewMouseDown="Corner_MouseDown"/>
+        </Grid>
+    </Viewbox>
+</UserControl>
